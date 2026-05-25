@@ -188,7 +188,7 @@ function openTambahBarangPane() {
     opsiJenis +
     `</select></div>
             <div class="form-group"><label>Upload Foto Kondisi</label><input type="file" name="foto_kondisi" accept="image/*" required style="border:3px solid #1a1a1a; background:#fff; padding:6px;"></div>
-            <button type="submit" class="btn-admin-submit">Simpan ke Gudang ➔</button>
+            <button type="submit" class="btn-admin-submit">Simpan</button>
         </form>
     `;
   previewPane.classList.add("open");
@@ -228,13 +228,13 @@ function openKategoriPane(e) {
         </div>
         <form action="prosesJenis.php" method="POST" class="admin-form-inside" style="margin-bottom:20px;">
             <input type="hidden" name="aksi" value="tambah">
-            <div class="form-group"><label>Nama Kategori Baru</label><input type="text" name="nama_jenis" placeholder="Contoh: Networking" required></div>
-            <button type="submit" class="btn-admin-submit" style="background:#ff99ff;">Tambah Kategori ➔</button>
+            <div class="form-group"><label>Nama Kategori Baru</label><input type="text" name="nama_jenis" placeholder="masukkan kategori..." required></div>
+            <button type="submit" class="btn-admin-submit" style="background:#ff99ff;">Tambahkan</button>
         </form>
-        <h4 style="font-size:0.85rem; text-transform:uppercase; margin-top:15px;">Daftar Kategori Aktif</h4>
+        <h4 style="font-size:0.85rem; text-transform:uppercase; margin-top:15px;">Daftar Kategori</h4>
         <div class="aside-table-wrapper">
             <table class="aside-table">
-                <thead><tr><th style="width:40px;">No</th><th>Nama Kategori</th><th style="width:70px;">Aksi</th></tr></thead>
+                <thead><tr><th style="width:40px;">No</th><th>Kategori</th><th style="width:70px;">Edit</th></tr></thead>
                 <tbody>` +
     (rowsKategori
       ? rowsKategori
@@ -362,7 +362,7 @@ function openSettingProfilPane(e, usernameSekarang, fotoSekarang) {
                     <label>Ganti Foto Profil</label>
                     <input type="file" name="foto" accept="image/*" style="border:3px solid #1a1a1a; background:#fff; padding:6px;">
                 </div>
-                <button type="submit" class="btn-admin-submit" style="background:#ffff00;">Simpan Perubahan ➔</button>
+                <button type="submit" class="btn-admin-submit" style="background:#ffff00;">Simpan</button>
             </form>
         </div>
     `;
