@@ -1,0 +1,104 @@
+/* ==========================================================================
+   ADMIN DYNAMIC ASIDE PANELS & TABLES (ADDED BY BELL)
+   ========================================================================== */
+
+/* Form Input Khusus di Dalam Aside */
+.admin-form-inside {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.admin-form-inside label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+.admin-form-inside input, 
+.admin-form-inside select {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: #ffffff;
+    border: 3px solid #1a1a1a;
+    outline: none;
+    border-radius: 6px !important;
+}
+
+.admin-form-inside input:focus, 
+.admin-form-inside select:focus {
+    background-color: #f0f7ff;
+}
+
+/* Tombol Submit Utama Admin */
+.btn-admin-submit {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    background-color: #00ff66;
+    color: #1a1a1a;
+    border: 3px solid #1a1a1a;
+    box-shadow: 3px 3px 0px #1a1a1a;
+    cursor: pointer;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.btn-admin-submit:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #1a1a1a;
+}
+
+/* Pembungkus Tabel di Dalam Aside agar Bisa Scroll */
+.aside-table-wrapper {
+    max-height: 350px;
+    overflow-y: auto;
+    border: 3px solid #1a1a1a;
+    margin-top: 10px;
+    border-radius: 6px !important;
+}
+
+/* Desain Tabel di Dalam Aside */
+.aside-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    background: #fff;
+}
+
+.aside-table th {
+    background: #ffde4d;
+    padding: 8px;
+    border-bottom: 3px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    color: #1a1a1a;
+}
+
+.aside-table td {
+    padding: 8px;
+    border-bottom: 2px solid #1a1a1a;
+    vertical-align: middle;
+    color: #1a1a1a;
+}
+
+/* Tombol Hapus Kecil di Tabel Aside */
+.btn-mini-delete {
+    background: #ff4d4d;
+    color: #fff;
+    padding: 3px 6px;
+    text-decoration: none;
+    border: 2px solid #1a1a1a;
+    font-size: 0.75rem;
+    box-shadow: 1px 1px 0px #1a1a1a;
+    display: inline-block;
+}
+
+.btn-mini-delete:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 0px #1a1a1a;
+}
