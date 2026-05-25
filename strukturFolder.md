@@ -2,13 +2,17 @@ folderUtama/
 │
 ├── admin/
 │   ├── dashboard.php
+|   ├── prosesBarang.php
+|   ├── prosesJenis.php
+|   ├── prosesUbahRole.php
 │
 ├── asset
 |    ├── css
-│    |   └── asideAdmin.css
-│    |   └── asideUser.css
-│    |   └── dashboard.css
-│    |   └── style.css
+│    │  ├── asideAdmin.css
+│    │  ├── asideUser.css
+│    │  ├── dashboard.css
+│    │  ├── style.css
+|    │
 │    └── js
 │        └── dashboard.js
 |
