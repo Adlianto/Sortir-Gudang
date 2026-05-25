@@ -92,7 +92,7 @@ function openPreviewPane(card, role = "user") {
       '<hr class="pane-divider" style="margin-top:20px;">' +
       '<a href="prosesBarang.php?aksi=hapus&id=' +
       id +
-      '" id="btnHapusBarang" style="display:block; text-align:center; background:#ff4d4d; color:white; padding:12px; font-weight:800; border:3px solid #1a1a1a; box-shadow:3px 3px 0 #1a1a1a; text-decoration:none; margin-top:20px; text-transform:uppercase;">Hapus Barang 🗑️</a>';
+      '" id="btnHapusBarang" style="display:block; text-align:center; background:#ff4d4d; color:white; padding:12px; font-weight:800; border:3px solid #1a1a1a; box-shadow:3px 3px 0 #1a1a1a; text-decoration:none; margin-top:20px; text-transform:uppercase;">Hapus</a>';
   }
 
   asideContent.innerHTML =
@@ -139,13 +139,13 @@ function openPreviewPane(card, role = "user") {
 
       Swal.fire({
         title: "HAPUS ITEM INI?",
-        text: "Data perangkat akan dilenyapkan permanen dari gudang database!",
+        text: "Data perangkat akan dihapus permanen dari sistem",
         icon: "error",
         showCancelButton: true,
         confirmButtonColor: "#ff4d4d",
         cancelButtonColor: "#ffffff",
-        confirmButtonText: "YA, DESTRUCTION 🗑️",
-        cancelButtonText: "BATAL",
+        confirmButtonText: "Hapus",
+        cancelButtonText: "Batal",
         background: "#ffffff",
         customClass: {
           popup: "swal-neubrutalism-popup",
@@ -172,21 +172,25 @@ function openTambahBarangPane() {
     });
   }
 
-  asideContent.innerHTML =
-    `
+  asideContent.innerHTML = `
         <div class="pane-header">
             <h3>Tambah Barang Baru</h3>
             <button class="close-pane-btn" onclick="closePreviewPane()">✕</button>
         </div>
+
         <form action="prosesBarang.php" method="POST" enctype="multipart/form-data" class="admin-form-inside">
             <input type="hidden" name="aksi" value="tambah">
-            <div class="form-group"><label>Nama Perangkat</label><input type="text" name="nama_perangkat" placeholder="Contoh: ThinkPad T430" required></div>
-            <div class="form-group"><label>Merek Alat</label><input type="text" name="merek" placeholder="Contoh: Lenovo" required></div>
-            <div class="form-group"><label>Harga Per Unit (Rp)</label><input type="number" name="harga" placeholder="Contoh: 3500000" required></div>
-            <div class="form-group"><label>Jumlah Stok</label><input type="number" name="stok" placeholder="Contoh: 5" required></div>
-            <div class="form-group"><label>Kategori Jenis</label><select name="id_jenis" required>` +
-    opsiJenis +
-    `</select></div>
+            <div class="form-group"><label>Nama Perangkat</label><input type="text" name="nama_perangkat" placeholder="masukan nama" required /></div>
+            <div class="form-group"><label>Merek Alat</label><input type="text" name="merek" placeholder="masukkan merk" required /></div>
+            <div class="form-group"><label>Harga Per Unit (Rp)</label><input type="number" name="harga" placeholder="masukkan harga" required /></div>
+            <div class="form-group"><label>Jumlah Stok</label><input type="number" name="stok" placeholder="masukan jumlah stok" required /></div>
+            <div class="form-group">
+                <label>Kategori Jenis</label>
+                <select name="id_jenis" required>
+                    ${opsiJenis}
+                </select>
+            </div>
+
             <div class="form-group"><label>Upload Foto Kondisi</label><input type="file" name="foto_kondisi" accept="image/*" required style="border:3px solid #1a1a1a; background:#fff; padding:6px;"></div>
             <button type="submit" class="btn-admin-submit">Simpan</button>
         </form>

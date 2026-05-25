@@ -118,6 +118,22 @@ $foto_aktif = $user_aktif['foto_pengguna'] ?? '';
     </div>
 </div>
 
+<?php if (isset($_GET['status'])): ?>
+<script>
+    const status = "<?= $_GET['status']; ?>";
+    
+    if (status === 'ubah_role_sukses') {
+        Swal.fire({ title: 'Berhasil!', text: 'Otorisasi berhasil diperbarui.', icon: 'success', confirmButtonText: 'Oke' });
+    } else if (status === 'tambah_sukses') {
+        Swal.fire({ title: 'Barang Ditambahkan!', text: 'Perangkat berhasil ditambahkan.', icon: 'success', confirmButtonText: 'Oke' });
+    } else if (status === 'hapus_sukses') {
+        Swal.fire({ title: 'Berhasil Dihapus!', text: 'Perangkat telah didelete dari sistem.', icon: 'success', confirmButtonText: 'Oke' });
+    }
+
+    window.history.replaceState({}, document.title, window.location.pathname);
+</script>
+<?php endif; ?>
+
 <script>
     const kategoriData = <?= json_encode($array_kategori); ?>;
     const usersData = <?= json_encode($array_users); ?>;
